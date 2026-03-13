@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="StatDefinition" format=3 uid="uid://bm3q6asym05gl"]
+
+[ext_resource type="Script" uid="uid://camb7r8377tr2" path="res://code/statStuff/StatDefinition.gd" id="1_e56pr"]
+
+[resource]
+script = ExtResource("1_e56pr")
+DisplayName = "Hunger"
+DisplayType = 1
+color = Color(0.9137255, 0.44705883, 0, 1)
+defaultValue = 100
+metadata/_custom_type_script = "uid://camb7r8377tr2"

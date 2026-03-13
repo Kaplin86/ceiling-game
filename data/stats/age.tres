@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="StatDefinition" format=3 uid="uid://bsobw2hwnryu0"]
+
+[ext_resource type="Script" uid="uid://camb7r8377tr2" path="res://code/statStuff/StatDefinition.gd" id="1_yprde"]
+
+[resource]
+script = ExtResource("1_yprde")
+DisplayName = "Age"
+max_value = inf
+color = Color(1, 1, 1, 1)
+metadata/_custom_type_script = "uid://camb7r8377tr2"
