@@ -4,6 +4,9 @@
 [ext_resource type="Script" uid="uid://eub3yrtx563g" path="res://ceiling.gd" id="2_0xm2m"]
 [ext_resource type="AudioStream" uid="uid://bfilovfqca5ip" path="res://sfx/freesound_community-squeaky-toy-1-6059.mp3" id="3_h2yge"]
 [ext_resource type="Script" uid="uid://c63dc6xiaubw6" path="res://code/StatScreen.gd" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://c1pw3crodtxjv" path="res://scenes/statDisplays/bar.tscn" id="5_272bh"]
+[ext_resource type="PackedScene" uid="uid://8qmx1sc15nce" path="res://scenes/statDisplays/number.tscn" id="6_5vw27"]
+[ext_resource type="PackedScene" uid="uid://d2ad6wpuih4gi" path="res://scenes/statDisplays/spectrum.tscn" id="7_kek77"]
 
 [node name="Node2D" type="Node2D" unique_id=2093216592]
 
@@ -47,31 +50,16 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Control" type="MarginContainer" parent="Panel/ScrollContainer/VBoxContainer" unique_id=1144432738]
+[node name="Control" parent="Panel/ScrollContainer/VBoxContainer" unique_id=784974877 instance=ExtResource("5_272bh")]
+visible = false
 layout_mode = 2
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
 
-[node name="HBoxContainer2" type="HSplitContainer" parent="Panel/ScrollContainer/VBoxContainer/Control" unique_id=1404650365]
+[node name="Control2" parent="Panel/ScrollContainer/VBoxContainer" unique_id=1603758090 instance=ExtResource("6_5vw27")]
+visible = false
 layout_mode = 2
-touch_dragger_enabled = true
-drag_area_highlight_in_editor = true
 
-[node name="Name2" type="Label" parent="Panel/ScrollContainer/VBoxContainer/Control/HBoxContainer2" unique_id=255603611]
+[node name="Control3" parent="Panel/ScrollContainer/VBoxContainer" unique_id=406388354 instance=ExtResource("7_kek77")]
+visible = false
 layout_mode = 2
-size_flags_vertical = 1
-text = "Age:"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Name" type="Label" parent="Panel/ScrollContainer/VBoxContainer/Control/HBoxContainer2" unique_id=501265088]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 1
-text = "hi guys its me the age value today we are displaying how old ceiling is"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [connection signal="pressed" from="Ceiling/Button" to="Ceiling" method="_on_button_pressed"]

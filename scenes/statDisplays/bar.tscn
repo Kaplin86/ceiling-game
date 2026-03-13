@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c1pw3crodtxjv"]
+
+[node name="Control" type="MarginContainer" unique_id=784974877]
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="." unique_id=960304131]
+layout_mode = 2
+
+[node name="NAME" type="Label" parent="HBoxContainer2" unique_id=1764311084]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Age:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VALUE" type="ProgressBar" parent="HBoxContainer2" unique_id=130230911]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0

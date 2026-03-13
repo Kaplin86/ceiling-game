@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://d2ad6wpuih4gi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ehh6v"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(1, 1, 1, 0.4)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 6
+
+[node name="Control" type="MarginContainer" unique_id=784974877]
+offset_right = 398.0
+offset_bottom = 37.0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="." unique_id=960304131]
+layout_mode = 2
+
+[node name="VALUE" type="ProgressBar" parent="HBoxContainer2" unique_id=130230911]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+theme_override_colors/font_color = Color(0.9490196, 0.9490196, 0.9490196, 0.34509805)
+theme_override_styles/fill = SubResource("StyleBoxFlat_ehh6v")
+
+[node name="LOWERNAME" type="Label" parent="HBoxContainer2/VALUE" unique_id=605647972]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "bad"
+
+[node name="NAME" type="Label" parent="HBoxContainer2/VALUE" unique_id=202935932]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "bad"
+horizontal_alignment = 2
+
+[node name="TOTAL" type="Label" parent="HBoxContainer2/VALUE" unique_id=1961572750]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "total"
+horizontal_alignment = 1
