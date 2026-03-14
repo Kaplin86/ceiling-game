@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="StatDefinition" format=3 uid="uid://ct6rrvuxw8ltl"]
+
+[ext_resource type="Script" uid="uid://camb7r8377tr2" path="res://code/statStuff/StatDefinition.gd" id="1_2ph0k"]
+
+[resource]
+script = ExtResource("1_2ph0k")
+DisplayName = "NUTRITION: Fruits"
+DisplayType = 1
+color = Color(0.6695956, 0.9137255, 0, 1)
+defaultValue = 90
+metadata/_custom_type_script = "uid://camb7r8377tr2"

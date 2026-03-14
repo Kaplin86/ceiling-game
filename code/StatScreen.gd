@@ -32,3 +32,15 @@ func createElement(stat : StatDefinition):
 		statNode.get_theme_stylebox("fill").bg_color = Color( stat.color,0.9)
 		print(stat.color)
 	
+	if stat.DisplayType == stat.DisplayTypes.SPECTRUM:
+		var statNode : TextureProgressBar = newNodeReal.find_child("VALUE",true)
+		statNode.value = randf_range(0,100)
+		
+		var textureResource : GradientTexture2D = statNode.texture_progress
+		textureResource.gradient.set_color(0,stat.color.inverted())
+		textureResource.gradient.set_color(1,stat.color)
+		
+		var lowerName : Label = newNodeReal.find_child("LOWERNAME",true)
+		lowerName.text = stat.LowerName
+		var totalName : Label = newNodeReal.find_child("TOTAL",true)
+		totalName.text = stat.TotalName
