@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="StatDefinition" format=3 uid="uid://d0lgxwx3h52v1"]
+
+[ext_resource type="Script" uid="uid://camb7r8377tr2" path="res://code/statStuff/StatDefinition.gd" id="1_sssev"]
+
+[resource]
+script = ExtResource("1_sssev")
+DisplayName = "Dexterity"
+max_value = 20.0
+color = Color(0.47058824, 0.9137255, 0.49266037, 1)
+defaultValue = 10
+metadata/_custom_type_script = "uid://camb7r8377tr2"

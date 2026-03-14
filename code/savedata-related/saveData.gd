@@ -5,3 +5,4 @@ class_name SaveData
 @export var money = 0
 @export var inventory = []
 @export var sealName = ""
+@export var statValues = {}

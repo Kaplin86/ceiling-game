@@ -20,4 +20,4 @@ enum DisplayTypes {
 @export var TotalName : String
 
 func _to_string():
-	return DisplayName
+	return DisplayName + " definition"

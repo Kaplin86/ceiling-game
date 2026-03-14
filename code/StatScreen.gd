@@ -1,13 +1,11 @@
-extends Panel
-
-var Stats = ["res://data/stats/age.tres", "res://data/stats/happiness.tres", "res://data/stats/hunger.tres", "res://data/stats/thirst.tres", "res://data/stats/cleanliness.tres"]
+extends Control
 
 func _ready():
-	for I in Stats:
-		var statDef : StatDefinition = load(I)
-		createElement(statDef)
+	#await SaveDataManager.saveLoaded
+	for I in SaveDataManager.save.statValues:
+		createElement(SaveDataManager.statResourceDefs.get(I),SaveDataManager.save.statValues[I])
 
-func createElement(stat : StatDefinition):
+func createElement(stat : StatDefinition,value):
 	var newNode : PackedScene
 	if stat.DisplayType == stat.DisplayTypes.NUMBER:
 		newNode = load("res://scenes/statDisplays/number.tscn")
@@ -23,18 +21,23 @@ func createElement(stat : StatDefinition):
 	nameNode.text = stat.DisplayName
 	if stat.DisplayType == stat.DisplayTypes.NUMBER:
 		var statNode : Label = newNodeReal.find_child("VALUE",true)
-		statNode.text = "86"
+		statNode.text = str(value)
 		
 	if stat.DisplayType == stat.DisplayTypes.BAR:
 		var statNode : ProgressBar = newNodeReal.find_child("VALUE",true)
-		statNode.value = randf_range(0,100)
+		statNode.value = value
 		statNode.add_theme_stylebox_override("fill",StyleBoxFlat.new())
 		statNode.get_theme_stylebox("fill").bg_color = Color( stat.color,0.9)
 		print(stat.color)
+		statNode.max_value = stat.max_value
+		statNode.min_value = stat.min_value
 	
 	if stat.DisplayType == stat.DisplayTypes.SPECTRUM:
 		var statNode : TextureProgressBar = newNodeReal.find_child("VALUE",true)
-		statNode.value = randf_range(0,100)
+		statNode.value = value
+		
+		statNode.max_value = stat.max_value
+		statNode.min_value = stat.min_value
 		
 		var textureResource : GradientTexture2D = statNode.texture_progress
 		textureResource.gradient.set_color(0,stat.color.inverted())

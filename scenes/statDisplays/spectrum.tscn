@@ -4,18 +4,18 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8cg4w"]
 atlas = ExtResource("1_avu4p")
-region = Rect2(347.65, 149.98, 484, 39)
+region = Rect2(347.65, 149.98, 358, 39)
 
 [sub_resource type="Gradient" id="Gradient_ehh6v"]
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_avu4p"]
 gradient = SubResource("Gradient_ehh6v")
-width = 484
+width = 358
 height = 39
 repeat = 1
 
 [node name="Control" type="MarginContainer" unique_id=784974877]
-offset_right = 343.0
+offset_right = 532.0
 offset_bottom = 49.0
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
@@ -25,10 +25,18 @@ theme_override_constants/margin_bottom = 5
 [node name="HBoxContainer2" type="HBoxContainer" parent="." unique_id=960304131]
 layout_mode = 2
 
+[node name="TOTAL" type="Label" parent="HBoxContainer2" unique_id=1588174308]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Age:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="VALUE" type="TextureProgressBar" parent="HBoxContainer2" unique_id=1248474000]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.0
+nine_patch_stretch = true
 texture_under = SubResource("AtlasTexture_8cg4w")
 texture_progress = SubResource("GradientTexture2D_avu4p")
 tint_under = Color(0.14509805, 0.14509805, 0.14509805, 0.27058825)
@@ -39,6 +47,7 @@ anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
+offset_left = 8.0
 offset_top = -11.5
 offset_bottom = 11.5
 grow_horizontal = 2
@@ -54,25 +63,11 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_top = -11.5
+offset_right = -9.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 14
 text = "bad"
 horizontal_alignment = 2
-vertical_alignment = 1
-
-[node name="TOTAL" type="Label" parent="HBoxContainer2/VALUE" unique_id=1961572750]
-layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_top = -11.5
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 16
-text = "total"
-horizontal_alignment = 1
 vertical_alignment = 1

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="StatDefinition" format=3 uid="uid://b8nitkpg881b2"]
+
+[ext_resource type="Script" uid="uid://camb7r8377tr2" path="res://code/statStuff/StatDefinition.gd" id="1_keeta"]
+
+[resource]
+script = ExtResource("1_keeta")
+DisplayName = "Intelligence"
+max_value = 20.0
+color = Color(0.6078432, 0.9137255, 0.9014597, 1)
+defaultValue = 10
+metadata/_custom_type_script = "uid://camb7r8377tr2"

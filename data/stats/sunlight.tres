@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="StatDefinition" format=3 uid="uid://dhr843su3dsfn"]
+
+[ext_resource type="Script" uid="uid://camb7r8377tr2" path="res://code/statStuff/StatDefinition.gd" id="1_goa2q"]
+
+[resource]
+script = ExtResource("1_goa2q")
+DisplayName = "Sunlight"
+color = Color(1, 0.96305764, 0, 1)
+defaultValue = 100
+metadata/_custom_type_script = "uid://camb7r8377tr2"

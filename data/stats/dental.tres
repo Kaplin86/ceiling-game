@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="StatDefinition" format=3 uid="uid://cvcb8lbsg8mch"]
+
+[ext_resource type="Script" uid="uid://camb7r8377tr2" path="res://code/statStuff/StatDefinition.gd" id="1_pjke0"]
+
+[resource]
+script = ExtResource("1_pjke0")
+DisplayName = "Dental"
+DisplayType = 1
+color = Color(0.84855527, 0.8366339, 0.8037541, 1)
+defaultValue = 100
+metadata/_custom_type_script = "uid://camb7r8377tr2"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="StatDefinition" format=3 uid="uid://r04wgjibhyft"]
+
+[ext_resource type="Script" uid="uid://camb7r8377tr2" path="res://code/statStuff/StatDefinition.gd" id="1_7btd2"]
+
+[resource]
+script = ExtResource("1_7btd2")
+DisplayName = "Strength"
+max_value = 20.0
+color = Color(0.9137255, 0.626595, 0.6078432, 1)
+defaultValue = 10
+metadata/_custom_type_script = "uid://camb7r8377tr2"

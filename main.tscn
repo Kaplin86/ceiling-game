@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://d2yo6hwf8yxlw"]
 
+[ext_resource type="Texture2D" uid="uid://deg1nafvm3bna" path="res://images/pexels-bed-1839183_1280.jpg" id="1_5vw27"]
 [ext_resource type="Texture2D" uid="uid://b13ixey1te8gc" path="res://ceiling.png" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://eub3yrtx563g" path="res://ceiling.gd" id="2_0xm2m"]
 [ext_resource type="AudioStream" uid="uid://bfilovfqca5ip" path="res://sfx/freesound_community-squeaky-toy-1-6059.mp3" id="3_h2yge"]
@@ -7,14 +8,32 @@
 [ext_resource type="PackedScene" uid="uid://c1pw3crodtxjv" path="res://scenes/statDisplays/bar.tscn" id="5_272bh"]
 [ext_resource type="PackedScene" uid="uid://8qmx1sc15nce" path="res://scenes/statDisplays/number.tscn" id="6_5vw27"]
 [ext_resource type="PackedScene" uid="uid://d2ad6wpuih4gi" path="res://scenes/statDisplays/spectrum.tscn" id="7_kek77"]
+[ext_resource type="Texture2D" uid="uid://g5lylwf7fok0" path="res://images/bal (1).svg" id="9_dg77c"]
+[ext_resource type="Script" uid="uid://b0l5q6sc4x825" path="res://code/sceneButton.gd" id="10_ycdy4"]
+[ext_resource type="Texture2D" uid="uid://dsxe2ijr8brjg" path="res://images/toothiebrush.png" id="11_w48qg"]
+[ext_resource type="Texture2D" uid="uid://c17d7kbm0wmuy" path="res://images/ttreis-university-1547551_1280.png" id="12_vivmo"]
+[ext_resource type="Texture2D" uid="uid://bur118n38uqbd" path="res://images/janjf93-cutlery-1717156_1280.png" id="13_w48qg"]
+[ext_resource type="Texture2D" uid="uid://bjld1i0o1247h" path="res://images/mleckert82-plant-6995536_1280.png" id="13_ycdy4"]
+[ext_resource type="AudioStream" uid="uid://jvdjy6qaxrta" path="res://music/Study And Relax.mp3" id="15_vivmo"]
 
 [node name="Node2D" type="Node2D" unique_id=2093216592]
+
+[node name="PexelsBed18391831280" type="Sprite2D" parent="." unique_id=254278095]
+position = Vector2(591, 333)
+texture = ExtResource("1_5vw27")
 
 [node name="Ceiling" type="Sprite2D" parent="." unique_id=1959042070]
 position = Vector2(573.00006, 410.00003)
 scale = Vector2(0.2593105, 0.2593105)
 texture = ExtResource("1_ig7tw")
 script = ExtResource("2_0xm2m")
+
+[node name="Ceiling2" type="Sprite2D" parent="Ceiling" unique_id=1611470227]
+modulate = Color(0, 0, 0, 0.23137255)
+show_behind_parent = true
+position = Vector2(-11.569287, 131.11676)
+scale = Vector2(0.92897534, 0.6352224)
+texture = ExtResource("1_ig7tw")
 
 [node name="Button" type="Button" parent="Ceiling" unique_id=922271892]
 modulate = Color(1, 1, 1, 0)
@@ -27,10 +46,11 @@ offset_bottom = 254.52094
 stream = ExtResource("3_h2yge")
 
 [node name="Panel" type="Panel" parent="." unique_id=1963894530]
+clip_contents = true
 offset_left = 12.0
 offset_top = 9.0
 offset_right = 506.0
-offset_bottom = 304.0
+offset_bottom = 264.0
 script = ExtResource("4_1bvp3")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Panel" unique_id=447046880]
@@ -61,5 +81,70 @@ layout_mode = 2
 [node name="Control3" parent="Panel/ScrollContainer/VBoxContainer" unique_id=406388354 instance=ExtResource("7_kek77")]
 visible = false
 layout_mode = 2
+
+[node name="BrushTeeth" type="Button" parent="." unique_id=1237669361]
+self_modulate = Color(0.6615195, 0.8648072, 0.96693254, 1)
+offset_left = 1016.0
+offset_top = 515.0
+offset_right = 1137.0
+offset_bottom = 636.0
+icon = ExtResource("9_dg77c")
+flat = true
+script = ExtResource("10_ycdy4")
+
+[node name="icon" type="Sprite2D" parent="BrushTeeth" unique_id=1365046540]
+position = Vector2(58, 63)
+scale = Vector2(0.09259841, 0.090748355)
+texture = ExtResource("11_w48qg")
+
+[node name="School" type="Button" parent="." unique_id=1612471753]
+self_modulate = Color(0.6627451, 0.96862745, 0.69672686, 1)
+offset_left = 894.0
+offset_top = 518.0
+offset_right = 1015.0
+offset_bottom = 639.0
+icon = ExtResource("9_dg77c")
+flat = true
+script = ExtResource("10_ycdy4")
+
+[node name="icon" type="Sprite2D" parent="School" unique_id=1527815733]
+position = Vector2(60, 60)
+scale = Vector2(0.07112213, 0.06970116)
+texture = ExtResource("12_vivmo")
+
+[node name="Kitchen" type="Button" parent="." unique_id=697554894]
+self_modulate = Color(0.96862745, 0.6627451, 0.666719, 1)
+offset_left = 646.0
+offset_top = 516.0
+offset_right = 767.0
+offset_bottom = 637.0
+icon = ExtResource("9_dg77c")
+flat = true
+script = ExtResource("10_ycdy4")
+
+[node name="icon" type="Sprite2D" parent="Kitchen" unique_id=320778370]
+position = Vector2(60, 60)
+scale = Vector2(0.06183961, 0.060604095)
+texture = ExtResource("13_w48qg")
+
+[node name="Garden" type="Button" parent="." unique_id=1713180224]
+self_modulate = Color(0.8717266, 0.96862745, 0.6627451, 1)
+offset_left = 770.0
+offset_top = 518.0
+offset_right = 891.0
+offset_bottom = 639.0
+icon = ExtResource("9_dg77c")
+flat = true
+script = ExtResource("10_ycdy4")
+
+[node name="icon" type="Sprite2D" parent="Garden" unique_id=941570452]
+position = Vector2(60, 60)
+scale = Vector2(0.06183961, 0.060604095)
+texture = ExtResource("13_ycdy4")
+
+[node name="StudyAndRelax" type="AudioStreamPlayer" parent="." unique_id=1589498712]
+stream = ExtResource("15_vivmo")
+autoplay = true
+bus = &"BackgroundMusic"
 
 [connection signal="pressed" from="Ceiling/Button" to="Ceiling" method="_on_button_pressed"]

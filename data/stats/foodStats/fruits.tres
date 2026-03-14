@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_2ph0k")
-DisplayName = "NUTRITION: Fruits"
+DisplayName = "Fruits"
 DisplayType = 1
 color = Color(0.6695956, 0.9137255, 0, 1)
 defaultValue = 90

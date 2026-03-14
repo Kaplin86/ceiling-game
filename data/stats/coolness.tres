@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="StatDefinition" format=3 uid="uid://bg7581sd5kl2h"]
+
+[ext_resource type="Script" uid="uid://camb7r8377tr2" path="res://code/statStuff/StatDefinition.gd" id="1_e6wi8"]
+
+[resource]
+script = ExtResource("1_e6wi8")
+DisplayName = "Coolness"
+DisplayType = 1
+color = Color(0, 0.6237511, 0.9137255, 1)
+defaultValue = 95
+metadata/_custom_type_script = "uid://camb7r8377tr2"
