@@ -5,7 +5,28 @@ func _ready():
 	for I in SaveDataManager.save.statValues:
 		createElement(SaveDataManager.statResourceDefs.get(I),SaveDataManager.save.statValues[I])
 
+var statDefToDisplay = {}
+
+func _process(delta):
+	for I in SaveDataManager.save.statValues:
+		updateElement(SaveDataManager.statResourceDefs.get(I),SaveDataManager.save.statValues[I])
+
+func updateElement(stat : StatDefinition,value):
+	var node = statDefToDisplay[stat]
+	var valueNode = node.find_child("VALUE",true)
+	
+	if stat.DisplayType == stat.DisplayTypes.NUMBER:
+		valueNode.text = str(round(value * 10) / 10)
+		
+	if stat.DisplayType == stat.DisplayTypes.BAR:
+		valueNode.value = value
+	
+	if stat.DisplayType == stat.DisplayTypes.SPECTRUM:
+		valueNode.value = value
+	
+
 func createElement(stat : StatDefinition,value):
+	var node = stat
 	var newNode : PackedScene
 	if stat.DisplayType == stat.DisplayTypes.NUMBER:
 		newNode = load("res://scenes/statDisplays/number.tscn")
@@ -17,11 +38,13 @@ func createElement(stat : StatDefinition,value):
 	var newNodeReal : Control = newNode.instantiate()
 	
 	$ScrollContainer/VBoxContainer.add_child(newNodeReal)
+	statDefToDisplay[stat] = newNodeReal
+	
 	var nameNode : Label = newNodeReal.find_child("NAME",true)
 	nameNode.text = stat.DisplayName
 	if stat.DisplayType == stat.DisplayTypes.NUMBER:
 		var statNode : Label = newNodeReal.find_child("VALUE",true)
-		statNode.text = str(value)
+		statNode.text = str(round(value * 10) / 10)
 		
 	if stat.DisplayType == stat.DisplayTypes.BAR:
 		var statNode : ProgressBar = newNodeReal.find_child("VALUE",true)

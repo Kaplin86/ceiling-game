@@ -8,4 +8,5 @@ DisplayName = "Coolness"
 DisplayType = 1
 color = Color(0, 0.6237511, 0.9137255, 1)
 defaultValue = 95
+PerSecond = -0.5
 metadata/_custom_type_script = "uid://camb7r8377tr2"

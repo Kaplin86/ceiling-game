@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://o323ws17tmyq"]
+
+[ext_resource type="Texture2D" uid="uid://b13ixey1te8gc" path="res://ceiling.png" id="1_khm7v"]
+[ext_resource type="Script" uid="uid://eub3yrtx563g" path="res://ceiling.gd" id="2_6st8w"]
+[ext_resource type="AudioStream" uid="uid://bfilovfqca5ip" path="res://sfx/freesound_community-squeaky-toy-1-6059.mp3" id="3_vxv0d"]
+
+[node name="Ceiling" type="Sprite2D" unique_id=896250192]
+scale = Vector2(0.2593105, 0.2593105)
+texture = ExtResource("1_khm7v")
+script = ExtResource("2_6st8w")
+
+[node name="Ceiling2" type="Sprite2D" parent="." unique_id=1505721483]
+modulate = Color(0, 0, 0, 0.23137255)
+show_behind_parent = true
+position = Vector2(-11.569287, 131.11676)
+scale = Vector2(0.92897534, 0.6352224)
+texture = ExtResource("1_khm7v")
+
+[node name="Button" type="Button" parent="." unique_id=750761276]
+modulate = Color(1, 1, 1, 0)
+offset_left = -408.77652
+offset_top = -269.94672
+offset_right = 470.47824
+offset_bottom = 254.52094
+
+[node name="sqeak" type="AudioStreamPlayer" parent="." unique_id=1079036704]
+stream = ExtResource("3_vxv0d")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

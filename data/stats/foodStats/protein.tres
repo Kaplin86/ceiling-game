@@ -8,4 +8,5 @@ DisplayName = "Protein"
 DisplayType = 1
 color = Color(0.80078125, 0.40660396, 0, 1)
 defaultValue = 90
+PerSecond = -1.0
 metadata/_custom_type_script = "uid://camb7r8377tr2"

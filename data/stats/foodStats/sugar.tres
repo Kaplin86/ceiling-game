@@ -8,4 +8,5 @@ DisplayName = "Sugars"
 DisplayType = 1
 color = Color(0.9020849, 0.76364756, 0.9137255, 1)
 defaultValue = 90
+PerSecond = -1.0
 metadata/_custom_type_script = "uid://camb7r8377tr2"

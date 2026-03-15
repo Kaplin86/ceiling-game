@@ -1,9 +1,7 @@
 [gd_scene format=3 uid="uid://d2yo6hwf8yxlw"]
 
 [ext_resource type="Texture2D" uid="uid://deg1nafvm3bna" path="res://images/pexels-bed-1839183_1280.jpg" id="1_5vw27"]
-[ext_resource type="Texture2D" uid="uid://b13ixey1te8gc" path="res://ceiling.png" id="1_ig7tw"]
-[ext_resource type="Script" uid="uid://eub3yrtx563g" path="res://ceiling.gd" id="2_0xm2m"]
-[ext_resource type="AudioStream" uid="uid://bfilovfqca5ip" path="res://sfx/freesound_community-squeaky-toy-1-6059.mp3" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://o323ws17tmyq" path="res://scenes/ceiling.tscn" id="2_w48qg"]
 [ext_resource type="Script" uid="uid://c63dc6xiaubw6" path="res://code/StatScreen.gd" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://c1pw3crodtxjv" path="res://scenes/statDisplays/bar.tscn" id="5_272bh"]
 [ext_resource type="PackedScene" uid="uid://8qmx1sc15nce" path="res://scenes/statDisplays/number.tscn" id="6_5vw27"]
@@ -14,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://c17d7kbm0wmuy" path="res://images/ttreis-university-1547551_1280.png" id="12_vivmo"]
 [ext_resource type="Texture2D" uid="uid://bur118n38uqbd" path="res://images/janjf93-cutlery-1717156_1280.png" id="13_w48qg"]
 [ext_resource type="Texture2D" uid="uid://bjld1i0o1247h" path="res://images/mleckert82-plant-6995536_1280.png" id="13_ycdy4"]
+[ext_resource type="Texture2D" uid="uid://ohcpfpijml64" path="res://images/elionas-phone-1332800_1280.png" id="14_2cqfq"]
 [ext_resource type="AudioStream" uid="uid://jvdjy6qaxrta" path="res://music/Study And Relax.mp3" id="15_vivmo"]
 
 [node name="Node2D" type="Node2D" unique_id=2093216592]
@@ -22,28 +21,8 @@
 position = Vector2(591, 333)
 texture = ExtResource("1_5vw27")
 
-[node name="Ceiling" type="Sprite2D" parent="." unique_id=1959042070]
+[node name="Ceiling" parent="." unique_id=896250192 instance=ExtResource("2_w48qg")]
 position = Vector2(573.00006, 410.00003)
-scale = Vector2(0.2593105, 0.2593105)
-texture = ExtResource("1_ig7tw")
-script = ExtResource("2_0xm2m")
-
-[node name="Ceiling2" type="Sprite2D" parent="Ceiling" unique_id=1611470227]
-modulate = Color(0, 0, 0, 0.23137255)
-show_behind_parent = true
-position = Vector2(-11.569287, 131.11676)
-scale = Vector2(0.92897534, 0.6352224)
-texture = ExtResource("1_ig7tw")
-
-[node name="Button" type="Button" parent="Ceiling" unique_id=922271892]
-modulate = Color(1, 1, 1, 0)
-offset_left = -408.77652
-offset_top = -269.94672
-offset_right = 470.47824
-offset_bottom = 254.52094
-
-[node name="sqeak" type="AudioStreamPlayer" parent="Ceiling" unique_id=1063314864]
-stream = ExtResource("3_h2yge")
 
 [node name="Panel" type="Panel" parent="." unique_id=1963894530]
 clip_contents = true
@@ -127,6 +106,22 @@ position = Vector2(60, 60)
 scale = Vector2(0.06183961, 0.060604095)
 texture = ExtResource("13_w48qg")
 
+[node name="Phone" type="Button" parent="." unique_id=499424273]
+self_modulate = Color(0.9465523, 0.6627451, 0.96862745, 1)
+offset_left = 1017.0
+offset_top = 396.0
+offset_right = 1138.0
+offset_bottom = 517.0
+icon = ExtResource("9_dg77c")
+flat = true
+script = ExtResource("10_ycdy4")
+destinationScene = "res://scenes/phone.tscn"
+
+[node name="icon" type="Sprite2D" parent="Phone" unique_id=1175620763]
+position = Vector2(60, 60)
+scale = Vector2(0.06183961, 0.060604095)
+texture = ExtResource("14_2cqfq")
+
 [node name="Garden" type="Button" parent="." unique_id=1713180224]
 self_modulate = Color(0.8717266, 0.96862745, 0.6627451, 1)
 offset_left = 770.0
@@ -146,5 +141,3 @@ texture = ExtResource("13_ycdy4")
 stream = ExtResource("15_vivmo")
 autoplay = true
 bus = &"BackgroundMusic"
-
-[connection signal="pressed" from="Ceiling/Button" to="Ceiling" method="_on_button_pressed"]

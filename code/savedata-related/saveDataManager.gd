@@ -53,3 +53,13 @@ func _ready():
 			save.statValues[I] = statResourceDefs[I].defaultValue
 	print(save.statValues)
 	saveLoaded.emit()
+
+func _process(delta):
+	for I in statResourceDefs:
+		if save.statValues.has(I):
+			save.statValues[I] += statResourceDefs[I].PerSecond * delta * 0.25
+
+func changeStat(statName,Value):
+	if save.statValues.has(statName):
+		save.statValues[statName] = clamp(Value + save.statValues[statName],statResourceDefs[statName].min_value,statResourceDefs[statName].max_value)
+		

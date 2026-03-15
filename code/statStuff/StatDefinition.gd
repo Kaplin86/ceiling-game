@@ -18,6 +18,8 @@ enum DisplayTypes {
 @export_category("SpectrumStuff")
 @export var LowerName : String
 @export var TotalName : String
+@export_category("Change")
+@export var PerSecond : float = 0
 
 func _to_string():
 	return DisplayName + " definition"

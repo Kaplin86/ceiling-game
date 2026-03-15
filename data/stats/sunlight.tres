@@ -7,4 +7,5 @@ script = ExtResource("1_goa2q")
 DisplayName = "Sunlight"
 color = Color(1, 0.96305764, 0, 1)
 defaultValue = 100
+PerSecond = -1.0
 metadata/_custom_type_script = "uid://camb7r8377tr2"

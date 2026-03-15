@@ -6,9 +6,9 @@
 script = ExtResource("1_nyn3r")
 DisplayName = "Clean"
 DisplayType = 2
-min_value = -100.0
 color = Color(0.6825224, 0.87950486, 0.9137255, 1)
 defaultValue = 50
 LowerName = "Dirty"
 TotalName = "Cleanliness"
+PerSecond = -1.0
 metadata/_custom_type_script = "uid://camb7r8377tr2"

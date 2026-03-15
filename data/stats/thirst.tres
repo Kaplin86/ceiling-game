@@ -8,4 +8,5 @@ DisplayName = "Thirst"
 DisplayType = 1
 color = Color(0, 0.78431374, 0.9137255, 1)
 defaultValue = 100
+PerSecond = -2.1
 metadata/_custom_type_script = "uid://camb7r8377tr2"
