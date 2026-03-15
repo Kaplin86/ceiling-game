@@ -70,6 +70,7 @@ offset_bottom = 636.0
 icon = ExtResource("9_dg77c")
 flat = true
 script = ExtResource("10_ycdy4")
+destinationScene = "res://scenes/brushteeth.tscn"
 
 [node name="icon" type="Sprite2D" parent="BrushTeeth" unique_id=1365046540]
 position = Vector2(58, 63)

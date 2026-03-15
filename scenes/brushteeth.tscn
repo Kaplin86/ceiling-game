@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://74u8sjf4sfsr" path="res://scenes/brushteeth.gd" id="1_w6x75"]
 [ext_resource type="PackedScene" uid="uid://o323ws17tmyq" path="res://scenes/ceiling.tscn" id="2_bfbxl"]
+[ext_resource type="Texture2D" uid="uid://det01ow58wcym" path="res://images/manbob86-bathroom-1872193_1280.jpg" id="2_s8bcw"]
 [ext_resource type="Texture2D" uid="uid://dsxe2ijr8brjg" path="res://images/toothiebrush.png" id="3_s8bcw"]
 [ext_resource type="AudioStream" uid="uid://djv8n7whcuu18" path="res://sfx/freesound_community-20131203_rubbing-toothbrush-wall-_zoomh2nxy-87303.mp3" id="4_bfbxl"]
 
@@ -14,15 +15,35 @@ size = Vector2(107, 54)
 [node name="brushteeth" type="Node2D" unique_id=630614684]
 script = ExtResource("1_w6x75")
 
+[node name="Manbob86Bathroom18721931280" type="Sprite2D" parent="." unique_id=354425369]
+position = Vector2(672, 288)
+texture = ExtResource("2_s8bcw")
+
+[node name="Manbob86Bathroom18721931280" type="Sprite2D" parent="Manbob86Bathroom18721931280" unique_id=1595739547]
+position = Vector2(-1261, 1)
+scale = Vector2(-1, 1)
+texture = ExtResource("2_s8bcw")
+
 [node name="Ceiling" parent="." unique_id=896250192 instance=ExtResource("2_bfbxl")]
 position = Vector2(517, 361)
 scale = Vector2(0.79797465, 0.79797465)
 clickable = false
 
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Ceiling" unique_id=746507178]
+position = Vector2(322.06537, -33.835663)
+amount = 20
+local_coords = true
+emission_shape = 3
+emission_rect_extents = Vector2(62.145, 9.4)
+gravity = Vector2(0, 2)
+scale_amount_min = 10.0
+scale_amount_max = 28.78
+
 [node name="FreesoundCommunity20131203RubbingToothbrushWallZoomh2Nxy87303" type="AudioStreamPlayer2D" parent="." unique_id=1679773615]
 position = Vector2(765, 337)
 stream = ExtResource("4_bfbxl")
 autoplay = true
+bus = &"BackgroundMusic"
 
 [node name="Toothbrush" type="Node2D" parent="." unique_id=100088177]
 position = Vector2(846, 533)
@@ -45,3 +66,10 @@ position = Vector2(776, 333)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CeilingMouth" unique_id=1975377634]
 position = Vector2(-6, 1)
 shape = SubResource("RectangleShape2D_bfbxl")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=228996103]
+offset_left = 811.0
+offset_top = 173.0
+offset_right = 1043.0
+offset_bottom = 202.0
+max_value = 10.0

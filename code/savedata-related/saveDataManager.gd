@@ -58,6 +58,7 @@ func _process(delta):
 	for I in statResourceDefs:
 		if save.statValues.has(I):
 			save.statValues[I] += statResourceDefs[I].PerSecond * delta * 0.25
+			save.statValues[I] = clamp(save.statValues[I],statResourceDefs[I].min_value,statResourceDefs[I].max_value)
 
 func changeStat(statName,Value):
 	if save.statValues.has(statName):
