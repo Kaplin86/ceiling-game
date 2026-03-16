@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bur118n38uqbd" path="res://images/janjf93-cutlery-1717156_1280.png" id="13_w48qg"]
 [ext_resource type="Texture2D" uid="uid://bjld1i0o1247h" path="res://images/mleckert82-plant-6995536_1280.png" id="13_ycdy4"]
 [ext_resource type="Texture2D" uid="uid://ohcpfpijml64" path="res://images/elionas-phone-1332800_1280.png" id="14_2cqfq"]
+[ext_resource type="Texture2D" uid="uid://671ro56ek8c2" path="res://images/padrefilar-shower-2002176_1280.png" id="14_vivmo"]
 [ext_resource type="AudioStream" uid="uid://jvdjy6qaxrta" path="res://music/Study And Relax.mp3" id="15_vivmo"]
 
 [node name="Node2D" type="Node2D" unique_id=2093216592]
@@ -137,6 +138,42 @@ script = ExtResource("10_ycdy4")
 position = Vector2(60, 60)
 scale = Vector2(0.06183961, 0.060604095)
 texture = ExtResource("13_ycdy4")
+
+[node name="Shower" type="Button" parent="." unique_id=1661196340]
+self_modulate = Color(0.6627451, 0.72922397, 0.96862745, 1)
+offset_left = 894.0
+offset_top = 399.0
+offset_right = 1015.0
+offset_bottom = 520.0
+icon = ExtResource("9_dg77c")
+flat = true
+script = ExtResource("10_ycdy4")
+destinationScene = "res://scenes/shower.tscn"
+
+[node name="icon" type="Sprite2D" parent="Shower" unique_id=81377119]
+position = Vector2(60, 60)
+scale = Vector2(0.06183961, 0.060604095)
+texture = ExtResource("14_vivmo")
+
+[node name="LemonadeStand" type="Button" parent="." unique_id=1781364847]
+self_modulate = Color(0.96862745, 0.81685054, 0.6627451, 1)
+offset_left = 1020.0
+offset_top = 278.0
+offset_right = 1141.0
+offset_bottom = 399.0
+icon = ExtResource("9_dg77c")
+flat = true
+script = ExtResource("10_ycdy4")
+
+[node name="Label" type="Label" parent="LemonadeStand" unique_id=1738863181]
+layout_mode = 0
+offset_left = 32.0
+offset_top = -8.0
+offset_right = 87.0
+offset_bottom = 124.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 96
+text = "$"
 
 [node name="StudyAndRelax" type="AudioStreamPlayer" parent="." unique_id=1589498712]
 stream = ExtResource("15_vivmo")

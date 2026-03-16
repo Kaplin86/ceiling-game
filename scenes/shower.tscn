@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://b1a7u5geq1gva"]
+
+[ext_resource type="Script" uid="uid://du571dogpnla2" path="res://scenes/shower.gd" id="1_ic1bp"]
+[ext_resource type="Texture2D" uid="uid://det01ow58wcym" path="res://images/manbob86-bathroom-1872193_1280.jpg" id="1_mq4iw"]
+[ext_resource type="PackedScene" uid="uid://o323ws17tmyq" path="res://scenes/ceiling.tscn" id="2_ic1bp"]
+[ext_resource type="AudioStream" uid="uid://bggouibd6347p" path="res://sfx/mrstokes302-brushing-hair-sfx-425028.mp3" id="2_oxv3j"]
+[ext_resource type="Texture2D" uid="uid://dhnifftjvurid" path="res://images/hairbrush.png" id="3_oxv3j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8hejq"]
+size = Vector2(156, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fvctb"]
+size = Vector2(531.5, 87)
+
+[node name="shower" type="Node2D" unique_id=551185239]
+script = ExtResource("1_ic1bp")
+
+[node name="sound" type="AudioStreamPlayer" parent="." unique_id=477741406]
+stream = ExtResource("2_oxv3j")
+autoplay = true
+
+[node name="Manbob86Bathroom18721931280" type="Sprite2D" parent="." unique_id=1267118570]
+position = Vector2(672, 288)
+texture = ExtResource("1_mq4iw")
+
+[node name="Manbob86Bathroom18721931280" type="Sprite2D" parent="Manbob86Bathroom18721931280" unique_id=1872612078]
+position = Vector2(-1261, 1)
+scale = Vector2(-1, 1)
+texture = ExtResource("1_mq4iw")
+
+[node name="Ceiling" parent="." unique_id=896250192 instance=ExtResource("2_ic1bp")]
+position = Vector2(557, 551)
+scale = Vector2(0.79797465, 0.79797465)
+clickable = false
+
+[node name="Brush" type="Node2D" parent="." unique_id=378682868]
+position = Vector2(1114, 276)
+
+[node name="Sprite2D" type="Sprite2D" parent="Brush" unique_id=1847908226]
+position = Vector2(-94, 16)
+rotation = 2.7189622
+scale = Vector2(0.24139562, -0.24139562)
+texture = ExtResource("3_oxv3j")
+
+[node name="Area2D" type="Area2D" parent="Brush" unique_id=1725910247]
+position = Vector2(-125, 25)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Brush/Area2D" unique_id=1425971251]
+position = Vector2(1, 2.5)
+shape = SubResource("RectangleShape2D_8hejq")
+
+[node name="CeilingHead" type="Area2D" parent="." unique_id=1419281657]
+position = Vector2(372, 364)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CeilingHead" unique_id=1921353333]
+position = Vector2(206.25, -11.5)
+shape = SubResource("RectangleShape2D_fvctb")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1771445488]
+offset_left = 451.0
+offset_top = 241.0
+offset_right = 683.0
+offset_bottom = 270.0
+max_value = 10.0
