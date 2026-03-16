@@ -133,6 +133,7 @@ offset_bottom = 639.0
 icon = ExtResource("9_dg77c")
 flat = true
 script = ExtResource("10_ycdy4")
+destinationScene = "res://scenes/zen_garden.tscn"
 
 [node name="icon" type="Sprite2D" parent="Garden" unique_id=941570452]
 position = Vector2(60, 60)

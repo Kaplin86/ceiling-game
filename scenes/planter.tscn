@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cjstkfaxj077k"]
+
+[ext_resource type="Texture2D" uid="uid://dguuludtvikih" path="res://images/openclipart-vectors-pot-576173_1280.png" id="1_fedb8"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_86cwo"]
+load_path = "res://.godot/imported/ceiling.png-0c9c162a5ef125e56c7e7c13c553a301.ctex"
+
+[node name="planter" type="Sprite2D" unique_id=1767071129]
+scale = Vector2(0.1379179, 0.1379179)
+texture = ExtResource("1_fedb8")
+
+[node name="plant" type="Sprite2D" parent="." unique_id=797155902]
+position = Vector2(-58.005356, -507.54825)
+scale = Vector2(0.7941687, 0.7941687)
+texture = SubResource("CompressedTexture2D_86cwo")
+
+[node name="timer" type="Label" parent="." unique_id=536977017]
+offset_left = -406.03854
+offset_top = 442.29196
+offset_right = -339.19415
+offset_bottom = 491.29196
+scale = Vector2(11.281, 11.281)
+text = "5:0
+"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=1142935721]
+modulate = Color(1, 1, 1, 0)
+offset_left = -493.0469
+offset_top = -862.8321
+offset_right = 478.54556
+offset_bottom = -130.51239

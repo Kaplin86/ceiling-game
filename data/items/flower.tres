@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://bxq7th60rjc37"]
+
+[ext_resource type="Script" uid="uid://dijvxfila5ctx" path="res://code/items/itemResource.gd" id="1_0aqxk"]
+[ext_resource type="Texture2D" uid="uid://8qebq4nsqwt5" path="res://images/items/flower.png" id="2_dkky5"]
+
+[resource]
+script = ExtResource("1_0aqxk")
+name = "flower"
+description = "Probably the most normal thing in this garden"
+texture = ExtResource("2_dkky5")
+edible = true
+metadata/_custom_type_script = "uid://dijvxfila5ctx"

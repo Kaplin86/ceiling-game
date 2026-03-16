@@ -9,6 +9,8 @@ var statList = [
 	"res://data/stats/dental.tres",
 	"res://data/stats/cleanliness.tres",
 	"res://data/stats/coolness.tres",
+	"res://data/stats/sunlight.tres",
+	
 	
 	
 	"res://data/stats/foodStats/carbs.tres",

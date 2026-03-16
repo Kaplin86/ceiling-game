@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://bauiu2qb0cobr"]
+
+[ext_resource type="Script" uid="uid://dijvxfila5ctx" path="res://code/items/itemResource.gd" id="1_184gd"]
+[ext_resource type="Texture2D" uid="uid://bilucva1a7pwk" path="res://images/items/ceiling.png" id="2_xs60p"]
+
+[resource]
+script = ExtResource("1_184gd")
+name = "Ceiling"
+description = "Its a mini ceiling."
+texture = ExtResource("2_xs60p")
+metadata/_custom_type_script = "uid://dijvxfila5ctx"

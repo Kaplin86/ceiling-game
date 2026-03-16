@@ -6,3 +6,4 @@ class_name SaveData
 @export var inventory = []
 @export var sealName = ""
 @export var statValues = {}
+@export var planterTimes = []

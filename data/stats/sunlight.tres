@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_goa2q")
 DisplayName = "Sunlight"
+DisplayType = 1
 color = Color(1, 0.96305764, 0, 1)
 defaultValue = 100
 PerSecond = -1.0

@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://droa7rkp4p648"]
+
+[ext_resource type="Texture2D" uid="uid://dhq37wintg56l" path="res://images/chiemseherin-ryoan-ji-9500830_1280.jpg" id="1_2icg1"]
+[ext_resource type="Script" uid="uid://d13bxysgtnepn" path="res://scenes/zen_garden.gd" id="1_hehcv"]
+[ext_resource type="PackedScene" uid="uid://o323ws17tmyq" path="res://scenes/ceiling.tscn" id="2_k8d8w"]
+[ext_resource type="Texture2D" uid="uid://g5lylwf7fok0" path="res://images/bal (1).svg" id="4_7woln"]
+[ext_resource type="Script" uid="uid://b0l5q6sc4x825" path="res://code/sceneButton.gd" id="5_p0y5p"]
+[ext_resource type="Texture2D" uid="uid://b13ixey1te8gc" path="res://ceiling.png" id="6_i0416"]
+[ext_resource type="PackedScene" uid="uid://cjstkfaxj077k" path="res://scenes/planter.tscn" id="7_k8q14"]
+[ext_resource type="AudioStream" uid="uid://dswnh5k72eg1p" path="res://music/River Flute.mp3" id="8_p0y5p"]
+
+[node name="Node2D" type="Node2D" unique_id=311848451 node_paths=PackedStringArray("planters")]
+script = ExtResource("1_hehcv")
+planters = [NodePath("planter"), NodePath("planter2"), NodePath("planter3"), NodePath("planter4"), NodePath("planter5")]
+
+[node name="ChiemseherinRyoanJi95008301280" type="Sprite2D" parent="." unique_id=1508427719]
+position = Vector2(594, 291)
+scale = Vector2(1.7190781, 0.65706813)
+texture = ExtResource("1_2icg1")
+
+[node name="Ceiling" parent="." unique_id=896250192 instance=ExtResource("2_k8d8w")]
+position = Vector2(150, 547)
+
+[node name="Garden" type="Button" parent="." unique_id=553548302]
+offset_left = 16.0
+offset_top = 21.0
+offset_right = 137.0
+offset_bottom = 142.0
+icon = ExtResource("4_7woln")
+flat = true
+script = ExtResource("5_p0y5p")
+destinationScene = "res://main.tscn"
+
+[node name="icon" type="Sprite2D" parent="Garden" unique_id=780144296]
+modulate = Color(0.6125629, 0.5986477, 1, 1)
+position = Vector2(60, 60)
+rotation = 0.7807664
+scale = Vector2(0.08749963, 0.023924973)
+texture = ExtResource("6_i0416")
+
+[node name="icon2" type="Sprite2D" parent="Garden" unique_id=1146264718]
+modulate = Color(0.6125629, 0.5986477, 1, 1)
+position = Vector2(60, 60)
+rotation = -0.856262
+scale = Vector2(0.08749963, 0.023924973)
+texture = ExtResource("6_i0416")
+
+[node name="planter" parent="." unique_id=1767071129 instance=ExtResource("7_k8q14")]
+position = Vector2(544, 502)
+
+[node name="planter2" parent="." unique_id=2109968298 instance=ExtResource("7_k8q14")]
+position = Vector2(744, 502)
+
+[node name="planter3" parent="." unique_id=1558701167 instance=ExtResource("7_k8q14")]
+position = Vector2(942.99994, 502)
+
+[node name="planter4" parent="." unique_id=1719902358 instance=ExtResource("7_k8q14")]
+position = Vector2(641, 273)
+
+[node name="planter5" parent="." unique_id=490346772 instance=ExtResource("7_k8q14")]
+position = Vector2(844, 270)
+
+[node name="RiverFlute" type="AudioStreamPlayer" parent="." unique_id=1496527813]
+stream = ExtResource("8_p0y5p")
+volume_db = -17.333
+pitch_scale = 1.25
+autoplay = true
