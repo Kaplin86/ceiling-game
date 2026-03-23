@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://bexs6lpdvcaj7"]
+
+[ext_resource type="Script" uid="uid://dijvxfila5ctx" path="res://code/items/itemResource.gd" id="1_jbbpa"]
+[ext_resource type="Texture2D" uid="uid://1hpfk00so5xa" path="res://images/items/frank_rietsch-cupcake-6524880.png" id="2_5lnon"]
+
+[resource]
+script = ExtResource("1_jbbpa")
+name = "Cupcake"
+description = "yummy"
+texture = ExtResource("2_5lnon")
+edible = true
+onEatStats = Dictionary[String, float]({
+"hunger": 15.0,
+"sugar": 50.0
+})
+metadata/_custom_type_script = "uid://dijvxfila5ctx"

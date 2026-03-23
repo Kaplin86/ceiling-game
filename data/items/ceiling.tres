@@ -6,6 +6,13 @@
 [resource]
 script = ExtResource("1_184gd")
 name = "Ceiling"
-description = "Its a mini ceiling."
+description = "Its a mini ceiling. You uh. you wouldn't encourage cannibalism, would you?"
 texture = ExtResource("2_xs60p")
+edible = true
+onEatStats = Dictionary[String, float]({
+"coolness": -30.0,
+"happiness": -30.0,
+"hunger": 60.0,
+"protein": 50.0
+})
 metadata/_custom_type_script = "uid://dijvxfila5ctx"

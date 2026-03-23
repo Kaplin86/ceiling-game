@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://ddn8pvfwrqb5m"]
+
+[ext_resource type="Script" uid="uid://dijvxfila5ctx" path="res://code/items/itemResource.gd" id="1_6g0dw"]
+[ext_resource type="Texture2D" uid="uid://djawomc1vk6vs" path="res://images/items/openclipart-vectors-carrot-161014.svg" id="2_cmqf5"]
+
+[resource]
+script = ExtResource("1_6g0dw")
+name = "Carrot"
+description = "its a orange carrot. i dont get payed enough to explain simple things to toddlers like you >:C"
+texture = ExtResource("2_cmqf5")
+edible = true
+onEatStats = Dictionary[String, float]({
+"hunger": 10.0,
+"veggies": 15.0
+})
+metadata/_custom_type_script = "uid://dijvxfila5ctx"

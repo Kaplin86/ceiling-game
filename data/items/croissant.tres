@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://bks252nfrb5ng"]
+
+[ext_resource type="Script" uid="uid://dijvxfila5ctx" path="res://code/items/itemResource.gd" id="1_2wfnl"]
+[ext_resource type="Texture2D" uid="uid://pjofaju250te" path="res://images/items/midora-croissant-3180454_1920.png" id="2_gr6wt"]
+
+[resource]
+script = ExtResource("1_2wfnl")
+name = "Croissant"
+description = "Um, yes... Are you going to finish that croissant?"
+texture = ExtResource("2_gr6wt")
+edible = true
+onEatStats = Dictionary[String, float]({
+"carbs": 25.0,
+"hunger": 10.0
+})
+metadata/_custom_type_script = "uid://dijvxfila5ctx"

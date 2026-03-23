@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d2yo6hwf8yxlw"]
 
 [ext_resource type="Texture2D" uid="uid://deg1nafvm3bna" path="res://images/pexels-bed-1839183_1280.jpg" id="1_5vw27"]
+[ext_resource type="Script" uid="uid://mwn7oga5t4lo" path="res://DEATH.gd" id="1_yaehf"]
 [ext_resource type="PackedScene" uid="uid://o323ws17tmyq" path="res://scenes/ceiling.tscn" id="2_w48qg"]
 [ext_resource type="Script" uid="uid://c63dc6xiaubw6" path="res://code/StatScreen.gd" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://c1pw3crodtxjv" path="res://scenes/statDisplays/bar.tscn" id="5_272bh"]
@@ -8,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://d2ad6wpuih4gi" path="res://scenes/statDisplays/spectrum.tscn" id="7_kek77"]
 [ext_resource type="Texture2D" uid="uid://g5lylwf7fok0" path="res://images/bal (1).svg" id="9_dg77c"]
 [ext_resource type="Script" uid="uid://b0l5q6sc4x825" path="res://code/sceneButton.gd" id="10_ycdy4"]
+[ext_resource type="Texture2D" uid="uid://ds1cn8e6xlvw7" path="res://images/muhnaufals-sorry-were-closed-7425365_1920.png" id="11_2cqfq"]
 [ext_resource type="Texture2D" uid="uid://dsxe2ijr8brjg" path="res://images/toothiebrush.png" id="11_w48qg"]
 [ext_resource type="Texture2D" uid="uid://c17d7kbm0wmuy" path="res://images/ttreis-university-1547551_1280.png" id="12_vivmo"]
 [ext_resource type="Texture2D" uid="uid://bur118n38uqbd" path="res://images/janjf93-cutlery-1717156_1280.png" id="13_w48qg"]
@@ -17,6 +19,7 @@
 [ext_resource type="AudioStream" uid="uid://jvdjy6qaxrta" path="res://music/Study And Relax.mp3" id="15_vivmo"]
 
 [node name="Node2D" type="Node2D" unique_id=2093216592]
+script = ExtResource("1_yaehf")
 
 [node name="PexelsBed18391831280" type="Sprite2D" parent="." unique_id=254278095]
 position = Vector2(591, 333)
@@ -86,12 +89,16 @@ offset_right = 1015.0
 offset_bottom = 639.0
 icon = ExtResource("9_dg77c")
 flat = true
-script = ExtResource("10_ycdy4")
 
 [node name="icon" type="Sprite2D" parent="School" unique_id=1527815733]
 position = Vector2(60, 60)
 scale = Vector2(0.07112213, 0.06970116)
 texture = ExtResource("12_vivmo")
+
+[node name="MuhnaufalsSorryWereClosed74253651920" type="Sprite2D" parent="School" unique_id=1682233155]
+position = Vector2(66, 84)
+scale = Vector2(0.052080885, 0.052080885)
+texture = ExtResource("11_2cqfq")
 
 [node name="Kitchen" type="Button" parent="." unique_id=697554894]
 self_modulate = Color(0.96862745, 0.6627451, 0.666719, 1)
@@ -157,7 +164,7 @@ position = Vector2(60, 60)
 scale = Vector2(0.06183961, 0.060604095)
 texture = ExtResource("14_vivmo")
 
-[node name="LemonadeStand" type="Button" parent="." unique_id=1781364847]
+[node name="Photo" type="Button" parent="." unique_id=1781364847]
 self_modulate = Color(0.96862745, 0.81685054, 0.6627451, 1)
 offset_left = 1020.0
 offset_top = 278.0
@@ -166,8 +173,9 @@ offset_bottom = 399.0
 icon = ExtResource("9_dg77c")
 flat = true
 script = ExtResource("10_ycdy4")
+destinationScene = "res://scenes/photo.tscn"
 
-[node name="Label" type="Label" parent="LemonadeStand" unique_id=1738863181]
+[node name="Label" type="Label" parent="Photo" unique_id=1738863181]
 layout_mode = 0
 offset_left = 32.0
 offset_top = -8.0
@@ -181,3 +189,38 @@ text = "$"
 stream = ExtResource("15_vivmo")
 autoplay = true
 bus = &"BackgroundMusic"
+
+[node name="Death" type="ColorRect" parent="." unique_id=398828130]
+visible = false
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 1163.0
+offset_bottom = 656.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="Death" unique_id=832387016]
+layout_mode = 0
+offset_left = 225.0
+offset_top = 48.0
+offset_right = 433.0
+offset_bottom = 71.0
+scale = Vector2(3.2186303, 4.6058702)
+text = "Your ceiling has DIED!!!!!!!!!!"
+
+[node name="death" type="Label" parent="Death" unique_id=2130017]
+layout_mode = 0
+offset_left = 196.0
+offset_top = 247.0
+offset_right = 958.0
+offset_bottom = 314.0
+theme_override_font_sizes/font_size = 23
+text = "Apon further inspection, it was revealed that your ceiling died from (or the lack thereof): "
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="Death" unique_id=467679159]
+layout_mode = 0
+offset_left = 340.0
+offset_top = 574.0
+offset_right = 770.0
+offset_bottom = 597.0
+text = "Your save has been DELETED. Restart the game to retry!"

@@ -32,7 +32,7 @@ func _process(delta):
 			var timerText : Label = plntr.get_node("timer")
 			plntr.get_node("plant").visible = false
 			var timeElapsed = Time.get_unix_time_from_system() - SaveDataManager.save.planterTimes[I] 
-			var timeRemaining = ((I + 1) * 22) - timeElapsed
+			var timeRemaining = ((I + 1) * 6) - timeElapsed
 			var minutes = int(timeRemaining / 60)
 			var seconds = int(timeRemaining) % 60
 			var time_string = "%02d:%02d" % [minutes, seconds]

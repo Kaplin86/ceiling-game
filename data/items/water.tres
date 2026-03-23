@@ -11,6 +11,6 @@ texture = ExtResource("2_0n8gb")
 edible = true
 onEatStats = Dictionary[String, float]({
 "dental": 3.0,
-"thirst": 30.0
+"thirst": 100.0
 })
 metadata/_custom_type_script = "uid://dijvxfila5ctx"

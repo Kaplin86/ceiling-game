@@ -32,20 +32,27 @@ var statList = [
 	
 ]
 
-var statResourceDefs : Dictionary = {}
+var statResourceDefs : Dictionary[String,StatDefinition] = {}
 
 @export var save : SaveData = null
 
 signal saveLoaded
 
 func _ready():
+	
+	
+	
 	for I : String in statList:
 		statResourceDefs[I.get_file().get_basename()] = load(I)
 	
 	print(statResourceDefs)
 	
 	
-	
+	if ResourceLoader.exists("user://ceilingSaveData.tres"):
+		var loaded_resource = ResourceLoader.load("user://ceilingSaveData.tres", "", ResourceLoader.CACHE_MODE_IGNORE)
+		if loaded_resource is SaveData:
+			save = loaded_resource
+
 	
 	if save == null:
 		save = load("res://code/savedata-related/testSaveData.tres")
@@ -55,6 +62,22 @@ func _ready():
 			save.statValues[I] = statResourceDefs[I].defaultValue
 	print(save.statValues)
 	saveLoaded.emit()
+	
+	var newTimer = Timer.new()
+	add_child(newTimer)
+	newTimer.wait_time = 5
+	newTimer.autostart = true
+	newTimer.timeout.connect(doSave)
+	newTimer.start()
+
+func doSave():
+	ResourceSaver.save(save, "user://ceilingSaveData.tres")
+	print("SAVE")
+
+func delete_save():
+	var path = "user://ceilingSaveData.tres"
+	if FileAccess.file_exists(path):
+		var err = DirAccess.remove_absolute(path)
 
 func _process(delta):
 	for I in statResourceDefs:

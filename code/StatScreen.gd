@@ -2,13 +2,13 @@ extends Control
 
 func _ready():
 	#await SaveDataManager.saveLoaded
-	for I in SaveDataManager.save.statValues:
+	for I in SaveDataManager.statResourceDefs:
 		createElement(SaveDataManager.statResourceDefs.get(I),SaveDataManager.save.statValues[I])
 
 var statDefToDisplay = {}
 
 func _process(delta):
-	for I in SaveDataManager.save.statValues:
+	for I in SaveDataManager.statResourceDefs:
 		updateElement(SaveDataManager.statResourceDefs.get(I),SaveDataManager.save.statValues[I])
 
 func updateElement(stat : StatDefinition,value):
