@@ -2,9 +2,14 @@
 
 [ext_resource type="Texture2D" uid="uid://dhq37wintg56l" path="res://images/chiemseherin-ryoan-ji-9500830_1280.jpg" id="1_2icg1"]
 [ext_resource type="Script" uid="uid://d13bxysgtnepn" path="res://scenes/zen_garden.gd" id="1_hehcv"]
+[ext_resource type="Script" uid="uid://dijvxfila5ctx" path="res://code/items/itemResource.gd" id="2_i3w71"]
 [ext_resource type="PackedScene" uid="uid://o323ws17tmyq" path="res://scenes/ceiling.tscn" id="2_k8d8w"]
+[ext_resource type="Resource" uid="uid://krc8uimebyob" path="res://data/items/apple.tres" id="3_vmcwe"]
+[ext_resource type="Resource" uid="uid://bxq7th60rjc37" path="res://data/items/flower.tres" id="4_1oty2"]
 [ext_resource type="Texture2D" uid="uid://g5lylwf7fok0" path="res://images/bal (1).svg" id="4_7woln"]
+[ext_resource type="Resource" uid="uid://dylq2h88lvg1c" path="res://data/items/kaplin.tres" id="5_h0v54"]
 [ext_resource type="Script" uid="uid://b0l5q6sc4x825" path="res://code/sceneButton.gd" id="5_p0y5p"]
+[ext_resource type="Resource" uid="uid://dqlkuoo2wsy3i" path="res://data/items/pppp.tres" id="6_733ch"]
 [ext_resource type="Texture2D" uid="uid://b13ixey1te8gc" path="res://ceiling.png" id="6_i0416"]
 [ext_resource type="PackedScene" uid="uid://cjstkfaxj077k" path="res://scenes/planter.tscn" id="7_k8q14"]
 [ext_resource type="AudioStream" uid="uid://dswnh5k72eg1p" path="res://music/River Flute.mp3" id="8_p0y5p"]
@@ -12,6 +17,7 @@
 [node name="Node2D" type="Node2D" unique_id=311848451 node_paths=PackedStringArray("planters")]
 script = ExtResource("1_hehcv")
 planters = [NodePath("planter"), NodePath("planter2"), NodePath("planter3"), NodePath("planter4"), NodePath("planter5")]
+itemOptions = Array[ExtResource("2_i3w71")]([ExtResource("3_vmcwe"), ExtResource("4_1oty2"), ExtResource("5_h0v54"), ExtResource("6_733ch")])
 
 [node name="ChiemseherinRyoanJi95008301280" type="Sprite2D" parent="." unique_id=1508427719]
 position = Vector2(594, 291)

@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://bt801ut54vkhn"]
+
+[ext_resource type="PackedScene" uid="uid://o323ws17tmyq" path="res://scenes/ceiling.tscn" id="1_7ilqw"]
+[ext_resource type="Script" uid="uid://dm32dhh2wm2ug" path="res://scenes/kitchen.gd" id="1_mrp8g"]
+[ext_resource type="Texture2D" uid="uid://bdbbpp3txb8vn" path="res://images/user32212-home-2486092.jpg" id="2_g3o0j"]
+[ext_resource type="Texture2D" uid="uid://g5lylwf7fok0" path="res://images/bal (1).svg" id="3_v3ycp"]
+[ext_resource type="Script" uid="uid://b0l5q6sc4x825" path="res://code/sceneButton.gd" id="4_g3o0j"]
+[ext_resource type="Texture2D" uid="uid://b13ixey1te8gc" path="res://ceiling.png" id="5_58u3k"]
+[ext_resource type="AudioStream" uid="uid://jvdjy6qaxrta" path="res://music/Study And Relax.mp3" id="7_58u3k"]
+
+[node name="kitchen" type="Node2D" unique_id=1885367203]
+script = ExtResource("1_mrp8g")
+
+[node name="User32212Home2486092" type="Sprite2D" parent="." unique_id=220409797]
+position = Vector2(721, -10)
+scale = Vector2(1.0251384, 1.0251384)
+texture = ExtResource("2_g3o0j")
+
+[node name="Ceiling" parent="." unique_id=896250192 instance=ExtResource("1_7ilqw")]
+position = Vector2(849, 335.00003)
+scale = Vector2(0.5141938, 0.5141938)
+
+[node name="GridContainer2" type="Panel" parent="." unique_id=448186261]
+offset_left = -31.0
+offset_top = -35.0
+offset_right = 552.0
+offset_bottom = 695.0
+
+[node name="GridContainer" type="FlowContainer" parent="." unique_id=812842842]
+offset_right = 552.0
+offset_bottom = 647.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=151910202]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer" unique_id=776193614]
+visible = false
+clip_contents = false
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 7.0
+offset_bottom = 25.0
+bbcode_enabled = true
+text = "[b] watch as the kings new grove fits [/b]"
+fit_content = true
+autowrap_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/RichTextLabel" unique_id=229293549]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = -8
+theme_override_constants/margin_top = -8
+theme_override_constants/margin_right = -8
+theme_override_constants/margin_bottom = -8
+
+[node name="Panel" type="Panel" parent="CanvasLayer/RichTextLabel/MarginContainer" unique_id=1247300608]
+show_behind_parent = true
+layout_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Garden" type="Button" parent="." unique_id=179107786]
+offset_left = 998.0
+offset_top = 10.0
+offset_right = 1119.0
+offset_bottom = 131.0
+icon = ExtResource("3_v3ycp")
+flat = true
+script = ExtResource("4_g3o0j")
+destinationScene = "res://main.tscn"
+
+[node name="icon" type="Sprite2D" parent="Garden" unique_id=354950158]
+modulate = Color(0.6125629, 0.5986477, 1, 1)
+position = Vector2(60, 60)
+rotation = 0.7807664
+scale = Vector2(0.08749963, 0.023924973)
+texture = ExtResource("5_58u3k")
+
+[node name="icon2" type="Sprite2D" parent="Garden" unique_id=441295104]
+modulate = Color(0.6125629, 0.5986477, 1, 1)
+position = Vector2(60, 60)
+rotation = -0.856262
+scale = Vector2(0.08749963, 0.023924973)
+texture = ExtResource("5_58u3k")
+
+[node name="StudyAndRelax" type="AudioStreamPlayer" parent="." unique_id=78041280]
+stream = ExtResource("7_58u3k")
+autoplay = true
+bus = &"KITCHEN"

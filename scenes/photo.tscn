@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://mkxnk17j1x7v"]
+
+[ext_resource type="Script" uid="uid://y6ffgqk3kyhh" path="res://scenes/photo.gd" id="1_35foj"]
+[ext_resource type="Texture2D" uid="uid://bdbbpp3txb8vn" path="res://images/user32212-home-2486092.jpg" id="2_0rg5a"]
+[ext_resource type="Texture2D" uid="uid://dhq37wintg56l" path="res://images/chiemseherin-ryoan-ji-9500830_1280.jpg" id="2_f7fx1"]
+[ext_resource type="PackedScene" uid="uid://o323ws17tmyq" path="res://scenes/ceiling.tscn" id="2_vv5lh"]
+[ext_resource type="Texture2D" uid="uid://det01ow58wcym" path="res://images/manbob86-bathroom-1872193_1280.jpg" id="3_rdlxv"]
+[ext_resource type="Texture2D" uid="uid://deg1nafvm3bna" path="res://images/pexels-bed-1839183_1280.jpg" id="4_sj2g7"]
+[ext_resource type="Texture2D" uid="uid://cynsmwf2dhkyw" path="res://images/ymyphoto-da-guojing-6888603_1280.jpg" id="6_wr2hf"]
+[ext_resource type="Texture2D" uid="uid://g5lylwf7fok0" path="res://images/bal (1).svg" id="8_wr2hf"]
+[ext_resource type="Script" uid="uid://b0l5q6sc4x825" path="res://code/sceneButton.gd" id="9_ba0ld"]
+[ext_resource type="Texture2D" uid="uid://b13ixey1te8gc" path="res://ceiling.png" id="10_c1018"]
+
+[node name="Node2D" type="Node2D" unique_id=970047893]
+script = ExtResource("1_35foj")
+images = Array[Texture2D]([ExtResource("2_f7fx1"), ExtResource("3_rdlxv"), ExtResource("4_sj2g7"), ExtResource("2_0rg5a"), ExtResource("6_wr2hf")])
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=736259662]
+offset_right = 1155.0
+offset_bottom = 657.0
+color = Color(0.85882354, 1, 1, 1)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=2036097954]
+offset_left = 67.0
+offset_top = 72.0
+offset_right = 107.0
+offset_bottom = 112.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1378454675]
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="TextureRect" type="TextureRect" parent="SubViewportContainer/SubViewport" unique_id=197228885]
+offset_right = 655.0
+offset_bottom = 584.0
+texture = ExtResource("2_0rg5a")
+expand_mode = 1
+
+[node name="Ceiling2" parent="SubViewportContainer/SubViewport" unique_id=896250192 instance=ExtResource("2_vv5lh")]
+position = Vector2(255, 278)
+scale = Vector2(0.49507257, 0.49507257)
+
+[node name="Label" type="Label" parent="." unique_id=2137569373]
+offset_left = 44.0
+offset_top = 7.0
+offset_right = 459.0
+offset_bottom = 65.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 42
+text = "ceilingtube"
+
+[node name="Button" type="Button" parent="." unique_id=1304870095]
+offset_left = 300.0
+offset_top = 591.0
+offset_right = 342.0
+offset_bottom = 622.0
+text = "Post"
+
+[node name="Garden" type="Button" parent="." unique_id=1512814829]
+offset_left = 1033.0
+offset_top = 2.0
+offset_right = 1154.0
+offset_bottom = 123.0
+icon = ExtResource("8_wr2hf")
+flat = true
+script = ExtResource("9_ba0ld")
+destinationScene = "res://main.tscn"
+
+[node name="icon" type="Sprite2D" parent="Garden" unique_id=160376235]
+modulate = Color(0.6125629, 0.5986477, 1, 1)
+position = Vector2(60, 60)
+rotation = 0.7807664
+scale = Vector2(0.08749963, 0.023924973)
+texture = ExtResource("10_c1018")
+
+[node name="icon2" type="Sprite2D" parent="Garden" unique_id=1889683809]
+modulate = Color(0.6125629, 0.5986477, 1, 1)
+position = Vector2(60, 60)
+rotation = -0.856262
+scale = Vector2(0.08749963, 0.023924973)
+texture = ExtResource("10_c1018")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=313678051]
+offset_left = 602.0
+offset_top = 134.0
+offset_right = 1129.0
+offset_bottom = 586.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=548324335]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

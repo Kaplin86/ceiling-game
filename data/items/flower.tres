@@ -9,4 +9,9 @@ name = "flower"
 description = "Probably the most normal thing in this garden"
 texture = ExtResource("2_dkky5")
 edible = true
+onEatStats = {
+"dental": 15.0,
+"hunger": 5.0,
+"veggies": 5.0
+}
 metadata/_custom_type_script = "uid://dijvxfila5ctx"

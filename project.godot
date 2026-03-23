@@ -23,6 +23,10 @@ buses/default_bus_layout="uid://chxfyfndyuo3o"
 
 SaveDataManager="*uid://dwq5b06g7ya1g"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")

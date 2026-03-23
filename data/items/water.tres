@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://bf8pes81hrq88"]
+
+[ext_resource type="Script" uid="uid://dijvxfila5ctx" path="res://code/items/itemResource.gd" id="1_rhjmi"]
+[ext_resource type="Texture2D" uid="uid://bqyoy80f255wi" path="res://images/items/water.svg" id="2_0n8gb"]
+
+[resource]
+script = ExtResource("1_rhjmi")
+name = "Water"
+description = "A water bottle."
+texture = ExtResource("2_0n8gb")
+edible = true
+onEatStats = Dictionary[String, float]({
+"dental": 3.0,
+"thirst": 30.0
+})
+metadata/_custom_type_script = "uid://dijvxfila5ctx"

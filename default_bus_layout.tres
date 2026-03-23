@@ -22,7 +22,41 @@ room_size = 0.38
 damping = 0.37
 wet = 0.09
 
+[sub_resource type="AudioEffectFilter" id="AudioEffectFilter_g28q7"]
+resource_name = "Filter"
+cutoff_hz = 18643.0
+gain = 1.52
+
+[sub_resource type="AudioEffectPanner" id="AudioEffectPanner_j3pel"]
+resource_name = "Panner"
+
+[sub_resource type="AudioEffectPitchShift" id="AudioEffectPitchShift_j3pel"]
+resource_name = "PitchShift"
+pitch_scale = 0.6
+oversampling = 23
+
+[sub_resource type="AudioEffectHardLimiter" id="AudioEffectHardLimiter_j3pel"]
+resource_name = "HardLimiter"
+pre_gain_db = -4.28
+ceiling_db = -24.0
+release = 1.95
+
+[sub_resource type="AudioEffectEQ" id="AudioEffectEQ_j3pel"]
+resource_name = "EQ"
+band_db/32_hz = -60.0
+band_db/100_hz = -54.0
+band_db/320_hz = -44.6
+band_db/1000_hz = 8.2
+band_db/3200_hz = -49.7
+band_db/10000_hz = -16.0
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_g28q7"]
+resource_name = "Reverb"
+room_size = 0.03
+dry = 0.2
+
 [resource]
+bus/0/bypass_fx = true
 bus/1/name = &"BackgroundMusic"
 bus/1/solo = false
 bus/1/mute = false
@@ -39,3 +73,21 @@ bus/1/effect/3/effect = SubResource("AudioEffectPhaser_j3pel")
 bus/1/effect/3/enabled = false
 bus/1/effect/4/effect = SubResource("AudioEffectReverb_j3pel")
 bus/1/effect/4/enabled = true
+bus/2/name = &"KITCHEN"
+bus/2/solo = false
+bus/2/mute = false
+bus/2/bypass_fx = false
+bus/2/volume_db = 0.0
+bus/2/send = &"Master"
+bus/2/effect/0/effect = SubResource("AudioEffectFilter_g28q7")
+bus/2/effect/0/enabled = true
+bus/2/effect/1/effect = SubResource("AudioEffectPanner_j3pel")
+bus/2/effect/1/enabled = false
+bus/2/effect/2/effect = SubResource("AudioEffectPitchShift_j3pel")
+bus/2/effect/2/enabled = false
+bus/2/effect/3/effect = SubResource("AudioEffectHardLimiter_j3pel")
+bus/2/effect/3/enabled = true
+bus/2/effect/4/effect = SubResource("AudioEffectEQ_j3pel")
+bus/2/effect/4/enabled = true
+bus/2/effect/5/effect = SubResource("AudioEffectReverb_g28q7")
+bus/2/effect/5/enabled = true

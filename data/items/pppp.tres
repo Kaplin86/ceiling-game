@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://dqlkuoo2wsy3i"]
+
+[ext_resource type="Script" uid="uid://dijvxfila5ctx" path="res://code/items/itemResource.gd" id="1_rj3j8"]
+[ext_resource type="Texture2D" uid="uid://cpiudf508ahkn" path="res://images/items/purpleplucklintplant.png" id="2_1lfs5"]
+
+[resource]
+script = ExtResource("1_rj3j8")
+name = "Purple Plucklint Plushie Plant"
+description = "Purple Plucklint Plushie Plant. Well. Its probably not a plushie, nor a plant."
+texture = ExtResource("2_1lfs5")
+edible = true
+onEatStats = {
+"hunger": 20.0,
+"protein": 20.0,
+"thirst": 5.0
+}
+metadata/_custom_type_script = "uid://dijvxfila5ctx"

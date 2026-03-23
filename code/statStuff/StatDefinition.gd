@@ -14,12 +14,14 @@ enum DisplayTypes {
 @export var max_value : float = 100
 @export var color : Color = Color(0.914, 0.671, 0.0, 1.0)
 @export var defaultValue = 1
+@export var isIncreasePositive : bool = true # this one is to ensure we dont have "Hunger is increased" when it is realistically decreasing
 
 @export_category("SpectrumStuff")
 @export var LowerName : String
 @export var TotalName : String
 @export_category("Change")
 @export var PerSecond : float = 0
+
 
 func _to_string():
 	return DisplayName + " definition"

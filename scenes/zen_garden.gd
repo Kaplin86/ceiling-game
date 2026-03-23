@@ -3,6 +3,7 @@ extends Node2D
 @export var planters : Array[Node]
 @export var validPlanters = []
 var cropType = []
+@export var itemOptions : Array[Item] = []
 
 func _process(delta):
 	SaveDataManager.changeStat("sunlight",5 * delta)
@@ -14,25 +15,31 @@ func _process(delta):
 			timerText.text = ""
 			
 			plntr.get_node("plant").visible = true
-			plntr.get_node("plant").texture = load("res://images/items/"+cropType[I]+".png")
+			var texture : CompressedTexture2D = cropType[I].texture
+			var image = texture.get_image()
+			image.resize(1200,1200)
+			var newtexture = ImageTexture.create_from_image(image)
+			plntr.get_node("plant").texture = newtexture
+			
 			
 			if plntr.get_node("Button").button_pressed:
 				validPlanters[I] = false
 				SaveDataManager.save.planterTimes[I] = Time.get_unix_time_from_system()
+				SaveDataManager.save.inventory.append(cropType[I])
 			
 		else:
 			var plntr = planters[I]
 			var timerText : Label = plntr.get_node("timer")
 			plntr.get_node("plant").visible = false
 			var timeElapsed = Time.get_unix_time_from_system() - SaveDataManager.save.planterTimes[I] 
-			var timeRemaining = ((I + 1) * 40) - timeElapsed
+			var timeRemaining = ((I + 1) * 22) - timeElapsed
 			var minutes = int(timeRemaining / 60)
 			var seconds = int(timeRemaining) % 60
 			var time_string = "%02d:%02d" % [minutes, seconds]
 			timerText.text = time_string
 			if timeRemaining <= 0:
 				validPlanters[I] = true
-				cropType[I] = ["ceiling","apple","flower"].pick_random()
+				cropType[I] = itemOptions.pick_random().duplicate(true)
 		
 	
 

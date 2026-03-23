@@ -102,6 +102,7 @@ offset_bottom = 637.0
 icon = ExtResource("9_dg77c")
 flat = true
 script = ExtResource("10_ycdy4")
+destinationScene = "res://scenes/kitchen.tscn"
 
 [node name="icon" type="Sprite2D" parent="Kitchen" unique_id=320778370]
 position = Vector2(60, 60)

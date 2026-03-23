@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://dylq2h88lvg1c"]
+
+[ext_resource type="Script" uid="uid://dijvxfila5ctx" path="res://code/items/itemResource.gd" id="1_yk071"]
+[ext_resource type="Texture2D" uid="uid://co0c8tkhtxl3m" path="res://images/items/kaplin.png" id="2_0b75p"]
+
+[resource]
+script = ExtResource("1_yk071")
+name = "Kaplin"
+description = "the worlds BEST game devleoper (not to be confused with developer)"
+texture = ExtResource("2_0b75p")
+edible = true
+onEatStats = Dictionary[String, float]({
+"coolness": 25.0,
+"hunger": 25.0,
+"wisdom": 0.1
+})
+metadata/_custom_type_script = "uid://dijvxfila5ctx"
